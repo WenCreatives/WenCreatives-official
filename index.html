@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b4c00d9d9f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <img src="Wen Creatives o Background copy.png" class="logo" alt="Logo">
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="Youtube Videos.html">Youtube Videos</a></li>
+                   
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Building Modern, Responsive Websites Tailored<br>For You</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We specialize in crafting cutting-edge websites and applications tailored to your business needs. Whether you're launching a new product or revamping your existing brand, we have the tools to help you succeed.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-list">
+                <div>
+                    <h3>Web Design</h3>
+                    <p>We create visually stunning websites tailored to your audience.</p>
+                </div>
+                <div>
+                    <h3>SEO Optimization</h3>
+                    <p>Enhance your website's visibility and drive organic traffic.</p>
+                </div>
+                <div>
+                    <h3>Brand Identity</h3>
+                    <p>Build a brand that resonates with your customers.</p>
+                </div>
+                <div>
+                    <h3>App Development</h3>
+                    <p>Custom mobile and web apps to meet your business goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Wen Creatives. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+
+

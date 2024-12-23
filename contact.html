@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    <style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header */
+#header {
+    height: 100vh;
+    background-image: url('luca-bravo-9l_326FISzk-unsplash.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    padding: 10px 5%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    width: 140px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.header-text {
+    margin: 20% 0;
+    text-align: center;
+}
+
+.header-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#contact {
+    max-width: 800px; /* Max width of the form */
+    margin: 20px auto; /* Center the form on the page */
+    padding: 20px; /* Padding inside the form */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #2d2b2b; /* Light background color */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+
+}
+
+#contact:hover {
+    transform:translateY(7px); /* Lift the box on hover */
+    box-shadow: 0 6px 30px #027205; /* Add shadow on hover */
+}
+
+
+.form-group {
+    margin-bottom: 15px; /* Space between fields */
+}
+
+label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space below labels */
+
+}
+input{
+    width: 95%; /* Full width for inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+
+}
+input:hover{
+    transform:translateY(7px); /* Lift the box on hover */
+    box-shadow: 0 4px 20px #027205; /* Add shadow on hover */
+}
+
+input[type="email"],
+textarea {
+    width: 95%; /* Full width for inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+
+}
+
+textarea:hover{
+    transform:translateY(7px); /* Lift the box on hover */
+    box-shadow: 0 4px 20px #027205; /* Add shadow on hover */
+}
+
+
+.form-actions {
+    display: flex; /* Flexbox for button layout */
+    justify-content: space-between; /* Space between buttons */
+}
+
+button {
+    padding: 10px 20px; /* Padding for buttons */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #027205; /* Green background */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer on hover */
+}
+button:hover{
+    background-color: #06b61aea;
+}
+
+
+button[type="reset"] {
+    background-color: #f44336; /* Red background for reset */
+}
+button[type="reset"]:hover{
+    background-color: #b30707;
+}
+
+/* Footer */
+footer {
+    padding: 20px 5%;
+    text-align: center;
+    background: #111;
+    color: #aaa;
+}
+
+
+    </style>
+</head>
+<body>
+        <!-- Header Section -->
+        <header id="header">
+            <div class="container">
+                <nav>
+                    <img src="Wen Creatives o Background copy.png" class="logo" alt="Logo">
+                    <div class="hamburger" onclick="toggleMenu()">☰</div>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="Youtube Videos.html">Youtube Videos</a></li>
+                       
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>UI/UX Designer</p>
+                    <h1>Building Modern, Responsive Websites Tailored<br>For You</h1>
+                </div>
+            </div>
+        </header>
+    <!--contact section-->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contactForm" action="mailto:owenthiongo744@gmail.com" method="post" enctype="text/plain">
+        
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Your message here. You can start with your number"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </section>
+
+<!--form function-->
+        <script>
+            document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+        
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+        
+            // Create a mailto link
+            const mailtoLink = `mailto:mailto:owenthiongo744@gmail.com?subject=Contact Form Submission&body=Email: ${email}%0A%0AMessage: ${message}`;
+        
+            // Redirect to the mailto link
+            window.location.href = mailtoLink;
+        
+            //reset form
+            document.getElementById('contactForm').reset();
+        
+        });
+        
+            </script>
+
+            <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Wen Creatives. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

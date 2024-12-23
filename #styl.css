@@ -1,0 +1,39 @@
+.thumbnail-grid {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.thumbnail {
+    text-align: center;
+    max-width: 200px;
+    text-decoration: none;
+    color: #333;
+}
+
+.thumbnail img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.thumbnail:hover img {
+    transform: scale(1.05);
+}
+
+.thumbnail p {
+    margin-top: 0.5em;
+    font-size: 1em;
+}
+
+
+
+
+
+
+
+
+
+
